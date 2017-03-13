@@ -1,0 +1,23 @@
+{
+  "name": "npm_test",
+  "version": "1.0.0",
+  "description": "just messing with node package manager",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaimeNufio/NodeExperiement.git"
+  },
+  "keywords": [
+    "test",
+    "npm"
+  ],
+  "author": "Jaime Nufio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaimeNufio/NodeExperiement/issues"
+  },
+  "homepage": "https://github.com/JaimeNufio/NodeExperiement#readme"
+}
