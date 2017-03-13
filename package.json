@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/JaimeNufio/NodeExperiement/issues"
   },
-  "homepage": "https://github.com/JaimeNufio/NodeExperiement#readme"
+  "homepage": "https://github.com/JaimeNufio/NodeExperiement#readme",
+  "dependencies": {
+    "twit": "^2.2.5"
+  }
 }
