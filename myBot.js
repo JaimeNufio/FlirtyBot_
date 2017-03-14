@@ -1,15 +1,27 @@
-console.log("Running.");
+console.log("Running. Tweet away ;)");
 
 var Twit = require('twit');
 var config = require('./config');
+var flirts = require('./flirts');
 
 var T = new Twit(config);
 var stream = T.stream('user');
 
 stream.on('tweet', tweetEvent);
 
+//console.log(flirts.phrases);
+
 function findFlirt(){
-	return "Are you from Alabama  because you look like your mom and dad are sibblings ;)";
+	
+	
+	var possible =  flirts.phrases[Math.floor(Math.random()*flirts.phrases.length)];
+
+	while (possible.length >  119){
+		
+		possible =  flirts.phrases[Math.floor(Math.random()*flirts.phrases.length)];
+	}
+	
+	return possible+";)";
 }
 
 function tweetEvent(eventMsg){
@@ -18,8 +30,8 @@ function tweetEvent(eventMsg){
 	var tweetGot = eventMsg.text;tweetGot
 	var other = eventMsg.user.screen_name;
 
-	if (toWhom  == 'FlirtyBot_' && tweetGot.contains(";)")){
-		var newTweet = "@"+other+" "+findFlirt();
+	if (toWhom  == 'FlirtyBot_' && tweetGot.includes(";)")){
+		var newTweet = ".@"+other+" "+findFlirt();
 		sendTweet(newTweet);
 	}
 }
